@@ -3,12 +3,12 @@ package com.example.calcular9.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.calcular9.model.IMCState
+import com.example.calcular9.model.Paciente
 
 
-class IMCViewModel : ViewModel() {
-    private val _state = MutableLiveData(IMCState())
-    val state: LiveData<IMCState> get() = _state
+class HomeViewModel : ViewModel() {
+    private val _state = MutableLiveData(Paciente(name = ""))
+    val state: LiveData<Paciente> get() = _state
 
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> get() = _errorMessage

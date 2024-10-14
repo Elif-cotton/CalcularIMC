@@ -1,6 +1,7 @@
 package com.example.calcular9.model
 
-data class IMCState(
+data class Paciente(
+    val name: String,
     val age: String = "",
     val weight: String = "",
     val height: String = "",
