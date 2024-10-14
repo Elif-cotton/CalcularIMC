@@ -77,4 +77,9 @@ dependencies {
   
     implementation("androidx.compose.ui:ui-tooling-preview:1.7.0")
 
+    implementation(kotlin("script-runtime"))
+
+    implementation ("androidx.compose.runtime:runtime-livedata:1.5.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0")
+
 }

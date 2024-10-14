@@ -12,32 +12,31 @@ import androidx.compose.material3.*
 import androidx.compose.ui.graphics.Color
 import com.example.calcular9.ui.theme.Purple40
 
-
 @Composable
-fun GenderSelectionSegmentedButtonRow() {
-    // Lista de opciones y el estado de selección
+fun GenderSelectionSegmentedButtonRow(
+    selectedOption: String,
+    onOptionSelected: (String) -> Unit
+) {
     val options = listOf("Hombre", "Mujer")
-    val selectedOption = remember { mutableStateOf(options[0]) }
 
-    // Usar MultiChoiceSegmentedButtonRow para mostrar los botones
     MultiChoiceSegmentedButtonRow(
         modifier = Modifier.fillMaxWidth()
     ) {
         options.forEach { option ->
             SegmentedButton(
-                checked = selectedOption.value == option,
+                checked = selectedOption == option,
                 onCheckedChange = { isChecked ->
                     if (isChecked) {
-                        selectedOption.value = option
+                        onOptionSelected(option)
                     }
                 },
                 shape = MaterialTheme.shapes.medium,
                 modifier = Modifier.weight(1f),
                 colors = SegmentedButtonDefaults.colors(
-                    activeContainerColor = Purple40, // Color cuando el botón está seleccionado
-                    inactiveContainerColor = Color.White, // Color cuando el botón no está seleccionado
-                    activeContentColor = Color.White, // Color del texto cuando el botón está seleccionado
-                    inactiveContentColor = MaterialTheme.colorScheme.onSurface // Color del texto cuando el botón no está seleccionado
+                    activeContainerColor = Purple40,
+                    inactiveContainerColor = Color.White,
+                    activeContentColor = Color.White,
+                    inactiveContentColor = MaterialTheme.colorScheme.onSurface
                 )
             ) {
                 Text(
