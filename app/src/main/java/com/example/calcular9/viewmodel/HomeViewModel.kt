@@ -43,4 +43,19 @@ class HomeViewModel : ViewModel() {
         _state.value = _state.value?.copy(bmiResult = String.format("%.1f", imc))
         _errorMessage.value = null
     }
+
+    fun calcularEstadoSalud(imc: Double): String {
+        return when {
+            imc < 18.5 -> "Bajo peso"
+            imc in 18.5..24.9 -> "Peso Normal"
+            imc in 25.0..29.9 -> "Sobrepeso"
+            imc in 30.0..34.9 -> "Obesidad I"
+            imc in 35.0..39.9 -> "Obesidad II"
+            else -> "Obesidad III"
+        }
+    }
+
+    fun guardarDatosPaciente(nombre: String) {
+
+    }
 }

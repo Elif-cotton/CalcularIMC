@@ -97,4 +97,11 @@ dependencies {
     implementation ("androidx.compose.runtime:runtime-livedata:1.5.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0")
 
+
+    implementation(libs.accompanist.pager)
+    implementation(libs.lottie.compose)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(kotlin("script-runtime"))
+
 }

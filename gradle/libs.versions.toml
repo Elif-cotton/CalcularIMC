@@ -16,10 +16,14 @@ uiTooling = "1.7.3"
 uiToolingPreview = "1.7.3"
 uiToolingPreviewAndroid = "1.7.3"
 
-navigationCompose = "2.8.1"
+navigationCompose = "2.8.2"
 roomKtx = "2.6.1"
 swipe = "1.1.1"
 hiltAndroid = "2.51.1"
+
+accompanistPager = "0.15.0"
+datastorePreferences = "1.1.1"
+lottieCompose = "5.2.0"
 
 [libraries]
 androidx-activity-compose-v192 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
@@ -44,6 +48,10 @@ kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 
+
+accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottieCompose" }
 
 swipe = { module = "me.saket.swipe:swipe", version.ref = "swipe" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
